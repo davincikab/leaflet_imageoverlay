@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageOverlays</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <style>
+       body {
+           margin:0;
+           padding: 0;
+       }
+
+       .map-container {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: 100vw;
+           height: 100vh;
+       }
+
+       #map {
+           width:100vw;
+           height: 100vh;
+       }
+
+       .btn {
+           position: absolute;
+           top:3%;
+           right:4%;
+           z-index: 1000;
+           color:white;
+           background-color: brown;
+           box-shadow: 0px 0px 0.3em #ddd;
+           border:none;
+           padding:0.25em 0.375em;
+           font-size: 16px;
+           cursor: pointer;
+       }
+       
+       .btn.active {
+           background-color: green;
+       }
+
+       /* zoom control  */
+       .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+           border:none !important;
+       }
+
+       .leaflet-touch .leaflet-bar a {
+           margin:4px 0px;
+           border-radius: 50% !important;
+       }
+
+   </style>
+</head>
+<body>
+    <div class="map-container">
+        <div id="map">
+            <button class="btn" id="toggle-title">
+                Hide Title
+            </button>
+        </div>
+       
+    </div>
+    <!-- mapbox://styles/daudi97/ckdudgjow12jd19prca4m3p1a -->
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="main.js"></script>
+</body>
+</html>
